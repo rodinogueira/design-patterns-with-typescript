@@ -1,13 +1,13 @@
-import { MealCompositeProtocol } from "../interfaces/meal-composite-protocol";
+import { CompositeFoodProtocol } from "../interfaces/composite-food-protocol";
 
-export class MealBox implements MealCompositeProtocol {
-   private readonly _children: MealCompositeProtocol[] = [];
+export class MealBox implements CompositeFoodProtocol {
+   private readonly _children: CompositeFoodProtocol[] = [];
 
    getPrice(): number {
        return this._children.reduce((sum, meal) => sum + meal.getPrice(), 0);
    }
 
-   add(...meal: MealCompositeProtocol[]): void {
+   add(...meal: CompositeFoodProtocol[]): void {
     meal.forEach(item => this._children.push(item));
    }
 }

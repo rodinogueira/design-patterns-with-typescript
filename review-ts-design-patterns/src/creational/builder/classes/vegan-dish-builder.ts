@@ -1,7 +1,5 @@
 import { VeganBox } from "../composite/composite-vegan-box";
 import { VeganBuilderProtocol } from "../interfaces/vegan-builder-protocol";
-// import { Rice, Beans, Salad } from '../abstracts/vegan';
-import { VeganCompositeProtocol } from "../interfaces/vegan-composite-protocol";
 
 export class VeganDishBuilder implements VeganBuilderProtocol {
     private _veganBox: VeganBox = new VeganBox();

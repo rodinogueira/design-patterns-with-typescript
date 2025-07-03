@@ -4,10 +4,10 @@ export class MealBox implements CompositeFoodProtocol {
    private readonly _children: CompositeFoodProtocol[] = [];
 
    getPrice(): number {
-       return this._children.reduce((sum, meal) => sum + meal.getPrice(), 0);
+       return this._children.reduce((sum, prod) => sum + prod.getPrice(), 0);
    }
 
-   add(...meal: CompositeFoodProtocol[]): void {
-    meal.forEach(item => this._children.push(item));
+   add(...products: CompositeFoodProtocol[]): void {
+    products.forEach(product => this._children.push(product));
    }
 }

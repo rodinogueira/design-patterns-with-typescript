@@ -1,11 +1,11 @@
-import { VeganBox } from "../composite/composite-vegan-box";
+import { MealBox } from "../composite/composite-meal-box";
 import { VeganBuilderProtocol } from "../interfaces/vegan-builder-protocol";
 
 export class VeganDishBuilder implements VeganBuilderProtocol {
-    private _veganBox: VeganBox = new VeganBox();
+    private _veganBox: MealBox = new MealBox();
     
     reset(): this {
-        this._veganBox = new VeganBox();
+        this._veganBox = new MealBox();
         return this;
     }
 
@@ -22,7 +22,7 @@ export class VeganDishBuilder implements VeganBuilderProtocol {
         return this;
     }
 
-    getSalad(): VeganBox {
+    getSalad(): MealBox {
         return this._veganBox;
     }
 }

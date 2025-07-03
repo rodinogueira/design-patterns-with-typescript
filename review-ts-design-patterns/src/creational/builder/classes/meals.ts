@@ -1,4 +1,4 @@
-import { AbstractMeal } from "./abstract-meal";
+import { AbstractMeal } from "../abstracts/abstract-meal";
 
 export class Rice extends AbstractMeal {}
 export class Beans extends AbstractMeal {}

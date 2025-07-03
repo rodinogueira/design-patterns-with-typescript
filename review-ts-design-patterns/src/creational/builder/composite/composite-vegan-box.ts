@@ -4,10 +4,10 @@ export class VeganBox implements VeganCompositeProtocol {
    private readonly _children: VeganCompositeProtocol[] = [];
 
    getPrice(): number {
-       return this._children.reduce((sum, meal) => sum + meal.getPrice(), 0);
+       return this._children.reduce((sum, prod) => sum + prod.getPrice(), 0);
    }
 
-   add(...meal: VeganCompositeProtocol[]): void {
-    meal.forEach(item => this._children.push(item));
+   add(...products: VeganCompositeProtocol[]): void {
+    products.forEach(product => this._children.push(product));
    }
 }

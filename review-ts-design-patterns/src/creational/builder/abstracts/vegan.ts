@@ -1,4 +1,4 @@
-import { AbstractVegan } from "../abstracts/abstract-vegan";
+import { AbstractVegan } from "./abstract-vegan";
 
 export class Rice extends AbstractVegan {}
 export class Beans extends AbstractVegan {}

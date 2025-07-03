@@ -1,6 +1,7 @@
-import { VeganBox } from "./composite-vegan-box";
+import { VeganBox } from "../composite/composite-vegan-box";
 import { VeganBuilderProtocol } from "../interfaces/vegan-builder-protocol";
-import { Rice, Beans, Salad } from './vegan';
+// import { Rice, Beans, Salad } from '../abstracts/vegan';
+import { VeganCompositeProtocol } from "../interfaces/vegan-composite-protocol";
 
 export class VeganDishBuilder implements VeganBuilderProtocol {
     private _veganBox: VeganBox = new VeganBox();
@@ -10,11 +11,16 @@ export class VeganDishBuilder implements VeganBuilderProtocol {
         return this;
     }
 
-    makeSalad(): this {
-        const rice = new Rice('Arroz', 5);
-        const beans = new Beans('Feijão', 10);
-        const salad = new Salad('Tomato', 20);
-        this._veganBox.add(rice, beans, salad);
+    // makeSalad(): this {
+    //     const rice = new Rice('Arroz', 5);
+    //     const beans = new Beans('Feijão', 10);
+    //     const salad = new Salad('Tomato', 20);
+    //     this._veganBox.add(rice, beans, salad);
+    //     return this;
+    // }
+
+    makeSalad(items: any[]): this {
+        this._veganBox.add(...items);
         return this;
     }
 

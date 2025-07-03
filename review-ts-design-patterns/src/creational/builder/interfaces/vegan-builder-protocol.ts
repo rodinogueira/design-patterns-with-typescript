@@ -1,4 +1,4 @@
 export interface VeganBuilderProtocol {
-    makeSalad(): this;
+    makeSalad(products: any[]): this;
     reset(): this;
 }
